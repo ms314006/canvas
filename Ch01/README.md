@@ -88,3 +88,32 @@
 
 [https://gqsm.gitlab.io/canvas/Ch01/ex02/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex0ㄉ/index.html)
 
+---
+
+### 矩形（四邊形）
+1. `canvas`能使用現有的函式繪製矩形（四邊形）
+    ```javascript
+    ctx.strokeRect(100,100,250,500)
+    ```
+
+>>>
+備註說明：
+* `strokeRect()`帶有四個參數
+    * 前兩個為繪製座標，會以矩形的左上角會對齊。
+    * 後兩個數值分別為矩形的寬和高。
+* 下方的`fillReact()`及`clearReact()`的對應參數也是同樣的作用。
+>>>
+
+2. 繪製填滿的矩形（四邊形）
+    ```javascript
+    ctx.fillRect(400,100,200,200)
+    ```
+3. 清除指定矩形（四邊形）範圍內所有的繪製圖案
+    ```javascript
+    ctx.clearRect(300,200,200,50)
+    ```
+
+>>>
+補充說明：
+* 上方的`strokeRect()`及`fillReact()`都可以在繪製前用`strokeStyle`及`fillStyle`指定顏色。
+>>>
