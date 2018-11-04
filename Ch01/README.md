@@ -13,4 +13,4 @@
    ```javascript
    let canvas = document.getElementById('myCanvas')
    ```
-3. 
+3. 1
