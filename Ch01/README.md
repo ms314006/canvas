@@ -44,5 +44,6 @@
     ctx.stroke()
     ```
 幾過上方五個步驟，canvas將會繪製出以下線條，可由以下頁面查閱：
+
 [https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html)
 
