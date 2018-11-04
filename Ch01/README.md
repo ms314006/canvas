@@ -44,4 +44,5 @@
     ctx.stroke()
     ```
 幾過上方五個步驟，canvas將會繪製出以下線條：
+
 ![線條成品](image/line.png)
