@@ -35,7 +35,7 @@
     ```javascript
     ctx.lineTo(50,50)
     ```
-4. 指定繪製線條顏色(不指定預設為黑色)
+4. 指定繪製線條顏色為紅色(不指定預設為黑色)
     ```javascript
     ctx.strokeStyle = '#FF0000'
     ```
@@ -44,5 +44,5 @@
     ctx.stroke()
     ```
 幾過上方五個步驟，canvas將會繪製出以下線條，可由以下頁面查閱：
-[]()
+[https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html)
 
