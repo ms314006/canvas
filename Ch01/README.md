@@ -58,6 +58,10 @@
 
 [https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html)
 
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex01/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex01/index.js)
+
 ---
 
 ### 多邊形
@@ -86,7 +90,11 @@
     ```
 幾過上方步驟，canvas將會圖形並填色，結果可由以下頁面查閱：
 
-[https://gqsm.gitlab.io/canvas/Ch01/ex02/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex0ㄉ/index.html)
+[https://gqsm.gitlab.io/canvas/Ch01/ex02/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex02/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex02/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex02/index.js)
 
 ---
 
@@ -117,3 +125,11 @@
 補充說明：
 * 上方的`strokeRect()`及`fillReact()`都可以在繪製前用`strokeStyle`及`fillStyle`指定顏色。
 >>>
+
+幾過上方步驟，canvas將繪製指定矩形（四邊形），結果可由以下頁面查閱：
+
+[https://gqsm.gitlab.io/canvas/Ch01/ex03/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex03/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex03/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex03/index.js)
