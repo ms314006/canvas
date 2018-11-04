@@ -28,7 +28,6 @@
 >>>
 使用須知：
 * `canvas`中的座標值與一般座標的Y軸相反，頁面最上方的Y軸座標為0，越向下座標數值越大 ; Ｘ座標則是相同，頁面坐左邊的座標為0，數值向右遞增。
-* `canvas`的角度計算方式也與一般相反，在`canvas`中水平線為0度，角度越往下越大，直到繞一圈回到水平線為360度。
 >>>
 
 ---
@@ -122,7 +121,7 @@
     ```
 
 >>>
-補充說明：
+備註說明：
 * 上方的`strokeRect()`及`fillReact()`都可以在繪製前用`strokeStyle`及`fillStyle`指定顏色。
 >>>
 
@@ -133,3 +132,46 @@
 程式碼：
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex03/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex03/index.js)
+
+### 圓形
+
+>>>
+使用須知：
+* 在`canvas`中繪製圓形並不像四邊形，他比較接近繪製圓弧線條的概念，所以在使用它時必須先用`ctx.beginPath()`初始化繪製路徑，最後再由`ctx.stroke()`將線條繪製到頁面上。
+* 在JavaScript中圓周率3.14用`Math.PI`表示，而`Math.PI`在角度中也代表180度。
+* `canvas`中角度的方向和一般相反，以圓心向右延伸的水平線為0度，由下開始增加度數。因此如果要在`canvas`繪製一個下半圓，就是從0度到180度，也就是`Math.PI`。
+>>>
+
+1. 在`canvas`中繪製圓形：
+    ```javascript
+    ctx.beginPath()
+    ctx.arc(100,100,50,0,Math.PI*2)
+    ctx.stroke()
+    ```
+>>>
+備註說明：
+* `ctx.arc()`帶有五個參數
+    * 前兩個參數為指定繪製的圓心座標。
+    * 第三個參數為指定繪製的圓形半徑。
+    * 最後兩個參數為指定圓弧線條的起始角度到結束的角度。上方從0度指定到180度(`Math.PI`)就是一個完整的圓。
+>>>
+2. 繪製一個填滿的下半圓形：
+    ```javascript
+    ctx.beginPath()
+    ctx.arc(300,100,50,0,Math.PI)
+    ctx.closePath()
+    ctx.fill()
+    ```
+>>>
+備註說明：
+* 從0度指定到180度(`Math.PI`)剛好是下半圓，但開始的點及結束的點並不會連結，所以加上`ctx.closePath()`使他相連。
+* 因為是繪製線條，所以在`stroke()`或`fill()`之前都可直接以`strokeStyle`及`fillStyle`指定顏色。
+>>>
+
+幾過上方步驟，canvas將繪製指定圓形，結果可由以下頁面查閱：
+
+[https://gqsm.gitlab.io/canvas/Ch01/ex04/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex04/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js)
