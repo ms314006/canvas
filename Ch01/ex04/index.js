@@ -11,6 +11,6 @@ ctx.stroke()
 
 
 ctx.beginPath()
-ctx.arc(300, 100, 50, 0, Math.PI)
+ctx.arc(300, 100, 50, 0, Math.PI) 
 ctx.closePath()
 ctx.fill()

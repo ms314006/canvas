@@ -174,4 +174,4 @@
 
 程式碼：
 
-[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js)
+[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js) 
