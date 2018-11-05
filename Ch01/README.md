@@ -1,6 +1,9 @@
 ## Ch01 基本繪圖方式
 
 ### canvas起手式
+
+---
+
 1. 在HTML頁面的`body`元素中標記`canvas`標籤
     ```html
     <html>
@@ -22,17 +25,15 @@
     ```javascript
     let ctx = canvas.getContext('2d')
     ```
-
----
-
 >>>
 使用須知：
 * `canvas`中的座標值與一般座標的Y軸相反，頁面最上方的Y軸座標為0，越向下座標數值越大 ; Ｘ座標則是相同，頁面坐左邊的座標為0，數值向右遞增。
 >>>
 
+### 畫線
+
 ---
 
-### 畫線
 1. 初始化線條路徑
     ```javascript
     ctx.beginPath()
@@ -61,9 +62,10 @@
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex01/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex01/index.js)
 
+### 多邊形
+
 ---
 
-### 多邊形
 1. 以三角形為例，先指定三個點
     ```javascript
     ctx.moveTo(50,0)
@@ -95,9 +97,10 @@
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex02/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex02/index.js)
 
+### 矩形（四邊形）
+
 ---
 
-### 矩形（四邊形）
 1. `canvas`能使用現有的函式繪製矩形（四邊形）
     ```javascript
     ctx.strokeRect(100,100,250,500)
@@ -134,6 +137,8 @@
 [https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex03/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex03/index.js)
 
 ### 圓形
+
+---
 
 >>>
 使用須知：
