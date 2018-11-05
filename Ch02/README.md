@@ -13,11 +13,14 @@
 
 ### 線條顏色
 ---
-1. 在繪製前指定線條顏色
+1. 指定線條的開始座標和移動座標
     ```javascript
     ctx.beginPath()
     ctx.moveTo(20,50)
     ctx.lineTo(120,50)
+    ```
+2. 設置線條顏色，並繪製至`canvas`上
+    ```javascript
     ctx.strokeStyle = '#FF0000'
     ctx.stroke()
     ```
@@ -32,14 +35,19 @@
 
 ### 線條寬度
 ---
-1. 在繪製前指定線條寬度
+1. 指定線條的開始座標和移動座標
     ```javascript
     ctx.beginPath()
     ctx.moveTo(20,50)
     ctx.lineTo(120,50)
+    ```
+2. 設置線條寬度，並繪製至`canvas`上
+    ```javascript
     ctx.lineWidth = 2
     ctx.stroke()
-
+    ```
+3. 繪製另一不同寬度的線條
+    ```javascript
     ctx.beginPath()
     ctx.moveTo(20,80)
     ctx.lineTo(120,80)
@@ -61,9 +69,12 @@
 
 ### 填滿色彩
 ---
-1. 在填滿前指定填滿色彩
+1. 設置填滿色彩
     ```javascript
     ctx.fillStyle = '#FF0000'
+    ```
+2. 繪製一個填滿的矩形（四邊形）
+    ```javascript
     ctx.fillRect(50,50,100,200)
     ```
 
@@ -87,9 +98,12 @@
 
 ### 全域設置
 ---
-1. 經過一次設置便可套用至所有線條及填滿色彩
+1. 設置透明度至所有繪製色彩
 ```javascript
 ctx.globalAlpha = 0.4
+```
+2. 繪製填滿黑色及紅色的矩形（四邊形）
+```javascript
 ctx.fillRect(50,50,200,200)
 ctx.fillStyle = '#FF0000'
 ctx.fillRect(100,100,200,200)
