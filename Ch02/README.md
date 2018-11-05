@@ -177,7 +177,7 @@ ctx.strokeRect(250,10,200,150)
 ```
 經上方步驟，canvas將會繪製一個擁有由白至紅的漸層矩形（四邊形）及矩形（四邊形）框線，結果可由以下頁面查閱：
 
-[https://gqsm.gitlab.io/canvas/Ch02/ex06/index.html](https://gqsm.gitlab.io/canvas/Ch02/ex05/index.html)
+[https://gqsm.gitlab.io/canvas/Ch02/ex06/index.html](https://gqsm.gitlab.io/canvas/Ch02/ex06/index.html)
 
 程式碼：
 
@@ -215,7 +215,7 @@ ctx.fillRect(0,0,200,200)
 
 經上方步驟，canvas將會繪製一個擁有由座標位置`(100,100)`半徑`100`的圓由白至紅漸層到座標位置`(150,150)`半徑`10`的圓，結果可由以下頁面查閱：
 
-[https://gqsm.gitlab.io/canvas/Ch02/ex07/index.html](https://gqsm.gitlab.io/canvas/Ch02/ex05/index.html)
+[https://gqsm.gitlab.io/canvas/Ch02/ex07/index.html](https://gqsm.gitlab.io/canvas/Ch02/ex07/index.html)
 
 程式碼：
 
