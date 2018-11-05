@@ -188,7 +188,7 @@
 * 在「貝茲曲線」中又分為「[二次方貝茲曲線](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#/media/File:B%C3%A9zier_2_big.gif)」及「[三次方貝茲曲線](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#/media/File:B%C3%A9zier_3_big.gif)」兩種方式。
 >>>
 
-#### 二次方貝茲曲線
+##### 二次方貝茲曲線
 ---
 1. 曲線如一般線條，需要初始化繪製線條，及指定曲線的原點
     ```javascript
@@ -219,7 +219,7 @@
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex05/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex05/index.js) 
 
-#### 三次方貝茲曲線
+##### 三次方貝茲曲線
 ---
 1. 初始化繪製線條及指定曲線原點
     ```javascript
