@@ -10,5 +10,4 @@ ctx.lineTo(100,100)
 ctx.lineTo(0,100)
 ctx.closePath()
 ctx.stroke()
-ctx.fillStyle = '#FF0000'
 ctx.fill()

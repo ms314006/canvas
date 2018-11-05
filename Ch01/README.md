@@ -45,11 +45,7 @@
     ```javascript
     ctx.lineTo(50,50)
     ```
-4. 指定繪製線條顏色為紅色(不指定預設為黑色)
-    ```javascript
-    ctx.strokeStyle = '#FF0000'
-    ```
-5. 將路徑畫上線條
+4. 將路徑畫上線條
     ```javascript
     ctx.stroke()
     ```
@@ -81,11 +77,6 @@
     ```
 4. 在多邊形內填滿色彩
     ```javascript
-    ctx.fill()
-    ```
-5. 也可在`fill()`前指定填滿的色彩顏色
-    ```javascript
-    ctx.fillStyle = '#FF0000'
     ctx.fill()
     ```
 經上方步驟，canvas將會圖形並填色，結果可由以下頁面查閱：
@@ -121,11 +112,6 @@
     ```javascript
     ctx.clearRect(300,200,200,50)
     ```
-
->>>
-備註說明：
-* 上方的`strokeRect()`及`fillReact()`都可以在繪製前用`strokeStyle`及`fillStyle`指定顏色。
->>>
 
 經上方步驟，canvas將繪製指定矩形（四邊形），結果可由以下頁面查閱：
 
@@ -169,7 +155,6 @@
 >>>
 備註說明：
 * 從0度指定到180度(`Math.PI`)剛好是下半圓，但開始的點及結束的點並不會連結，所以加上`ctx.closePath()`使他相連。
-* 因為是繪製線條，所以在`stroke()`或`fill()`之前都可直接以`strokeStyle`及`fillStyle`指定顏色。
 >>>
 
 經上方步驟，canvas將繪製指定圓形，結果可由以下頁面查閱：
