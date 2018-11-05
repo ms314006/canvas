@@ -1,7 +1,6 @@
 ## Ch01 基本繪圖方式
 
 ### canvas起手式
-
 ---
 
 1. 在HTML頁面的`body`元素中標記`canvas`標籤
