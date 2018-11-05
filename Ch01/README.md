@@ -53,7 +53,7 @@
     ```javascript
     ctx.stroke()
     ```
-幾過上方步驟，canvas將會繪製線條，結果可由以下頁面查閱：
+經上方步驟，canvas將會繪製線條，結果可由以下頁面查閱：
 
 [https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex01/index.html)
 
@@ -88,7 +88,7 @@
     ctx.fillStyle = '#FF0000'
     ctx.fill()
     ```
-幾過上方步驟，canvas將會圖形並填色，結果可由以下頁面查閱：
+經上方步驟，canvas將會圖形並填色，結果可由以下頁面查閱：
 
 [https://gqsm.gitlab.io/canvas/Ch01/ex02/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex02/index.html)
 
@@ -127,7 +127,7 @@
 * 上方的`strokeRect()`及`fillReact()`都可以在繪製前用`strokeStyle`及`fillStyle`指定顏色。
 >>>
 
-幾過上方步驟，canvas將繪製指定矩形（四邊形），結果可由以下頁面查閱：
+經上方步驟，canvas將繪製指定矩形（四邊形），結果可由以下頁面查閱：
 
 [https://gqsm.gitlab.io/canvas/Ch01/ex03/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex03/index.html)
 
@@ -172,10 +172,87 @@
 * 因為是繪製線條，所以在`stroke()`或`fill()`之前都可直接以`strokeStyle`及`fillStyle`指定顏色。
 >>>
 
-幾過上方步驟，canvas將繪製指定圓形，結果可由以下頁面查閱：
+經上方步驟，canvas將繪製指定圓形，結果可由以下頁面查閱：
 
 [https://gqsm.gitlab.io/canvas/Ch01/ex04/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex04/index.html)
 
 程式碼：
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex04/index.js) 
+
+### 曲線
+---
+>>>
+使用須知：
+* 在`canvas`中的曲線採用「[貝茲曲線](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)」公式繪製。
+* 在「貝茲曲線」中又分為「[二次方貝茲曲線](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#/media/File:B%C3%A9zier_2_big.gif)」及「[三次方貝茲曲線](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#/media/File:B%C3%A9zier_3_big.gif)」兩種方式。
+>>>
+
+#### 二次方貝茲曲線
+---
+1. 曲線如一般線條，需要初始化繪製線條，及指定曲線的原點
+    ```javascript
+    ctx.beginPath()
+    ctx.moveTo(20,100)
+    ```
+2. 如[動畫演示](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#/media/File:B%C3%A9zier_2_big.gif)，以二次方貝茲曲線繪製需指定一個基準點座標`P1`和曲線另一端`P2`座標
+    ```javascript
+    ctx.quadraticCurveTo(60,0,100,100)
+    ```
+>>>
+備註說明：
+* `quadraticCurveTo()`帶有四個參數
+    * 前兩個為基準點`P1`的座標。
+    * 後兩個為曲線的另一端`P2`座標。
+>>>
+
+3. 將線條給繪製到`canvas`上
+    ```javascript
+    ctx.stroke()
+    ```
+
+經上方步驟，canvas將以「二次方貝茲曲線」繪製指定曲線，結果可由以下頁面查閱：
+
+[https://gqsm.gitlab.io/canvas/Ch01/ex05/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex05/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex05/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex05/index.js) 
+
+#### 三次方貝茲曲線
+---
+1. 初始化繪製線條及指定曲線原點
+    ```javascript
+    ctx.beginPath()
+    ctx.moveTo(20,100)
+    ```
+2. 如[動畫演示](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#/media/File:B%C3%A9zier_3_big.gif)，以三次方貝茲曲線繪製需指定兩個基準點座標`P1`、`P2`和曲線另一端`P3`座標
+    ```javascript
+    ctx.bezierCurveTo(30,0,40,20,100,100)
+    ```
+>>>
+補充說明：
+* `bezierCurveTo()`帶有六個參數
+    * 前兩個參數為第一個基準點`P1`的座標。
+    * 第三四個參數為第二個基準點`P2`的座標。
+    * 最後兩個參數為曲線另一端的座標。
+* `quadraticCurveTo()`及`bezierCurveTo()`都是繪製線條，因此可以和`arc()`及`lineTo()`連結使用，連出去的點為在函式內指定的曲線另一端座標點。
+>>>
+4. 承上點補充說明，將上方的曲線連接第二個`bezierCurveTo()`，並將線條繪製到`canvas`上
+    ```javascript
+    ctx.bezierCurveTo(170,200,190,150,200,100)
+    ctx.stroke()
+    ```
+
+經上方步驟，canvas將以「三次方貝茲曲線」繪製指定曲線，結果可由以下頁面查閱：
+
+[https://gqsm.gitlab.io/canvas/Ch01/ex06/index.html](https://gqsm.gitlab.io/canvas/Ch01/ex06/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex06/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch01/ex06/index.js) 
+
+
+### 參考文章
+---
+* https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A
