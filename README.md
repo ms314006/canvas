@@ -24,7 +24,7 @@
     * [移動畫布](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E7%A7%BB%E5%8B%95%E7%95%AB%E5%B8%83)
     * [旋轉畫布](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E6%97%8B%E8%BD%89%E7%95%AB%E5%B8%83)
     * [縮放畫布](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E7%B8%AE%E6%94%BE%E7%95%AB%E5%B8%83)
-    * [紀錄及回復畫布狀態](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E7%B4%80%E9%8C%84%E5%8F%8A%E8%AA%BF%E9%96%B1%E7%95%AB%E5%B8%83%E7%8B%80%E6%85%8B)
+    * [紀錄及回復畫布狀態](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E7%B4%80%E9%8C%84%E5%8F%8A%E5%9B%9E%E5%BE%A9%E7%95%AB%E5%B8%83%E7%8B%80%E6%85%8B)
 
 ### 參考文章
 此專案學習內容參考以下文件整理撰寫： 
