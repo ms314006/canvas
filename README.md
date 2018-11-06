@@ -20,6 +20,11 @@
     * [漸層](https://gitlab.com/GQSM/canvas/tree/master/Ch02#%E6%BC%B8%E5%B1%A4)
         * [線性漸層](https://gitlab.com/GQSM/canvas/tree/master/Ch02#%E7%B7%9A%E6%80%A7%E6%BC%B8%E5%B1%A4)
         * [放射性漸層](https://gitlab.com/GQSM/canvas/tree/master/Ch02#%E6%94%BE%E5%B0%84%E6%80%A7%E6%BC%B8%E5%B1%A4)
+* [Ch03-進階繪製技巧](https://gitlab.com/GQSM/canvas/tree/master/Ch03#ch03-%E9%80%B2%E9%9A%8E%E7%B9%AA%E8%A3%BD%E6%8A%80%E5%B7%A7)
+    * [移動畫布](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E7%A7%BB%E5%8B%95%E7%95%AB%E5%B8%83)
+    * [旋轉畫布](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E6%97%8B%E8%BD%89%E7%95%AB%E5%B8%83)
+    * [縮放畫布](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E7%B8%AE%E6%94%BE%E7%95%AB%E5%B8%83)
+    * [紀錄及回復畫布狀態](https://gitlab.com/GQSM/canvas/tree/master/Ch03#%E7%B4%80%E9%8C%84%E5%8F%8A%E8%AA%BF%E9%96%B1%E7%95%AB%E5%B8%83%E7%8B%80%E6%85%8B)
 
 ### 參考文章
 此專案學習內容參考以下文件整理撰寫： 

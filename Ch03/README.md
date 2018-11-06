@@ -97,7 +97,7 @@
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch03/ex03/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch03/ex03/index.js)
 
-### 紀錄及調閱畫布狀態
+### 紀錄及回復畫布狀態
 ---
 1. 紀錄畫布的當前狀態
     ```javascript
