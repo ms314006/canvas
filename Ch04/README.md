@@ -1,6 +1,6 @@
 ## Ch04 基礎動畫
 
-### 基礎動畫-移動的矩形（四邊形）
+### 移動的矩形（四邊形）
 ---
 1. 建立一個變數`x`，並指派為0
     ```javascript
@@ -56,7 +56,7 @@
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch04/ex01/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch04/ex01/index.js)
 
-### 基礎動畫-衛星公轉
+### 衛星公轉
 ---
 1. 建立一個變數`t`
     ```javascript
