@@ -12,7 +12,7 @@
 
     }
     ```
-3. 清空`canvas`上的所有繪製圖形
+3. 在`draw`中先清空`canvas`上的所有繪製圖形
     ```javascript
     ctx.clearRect(0,0,canvas.width,canvas.height)
     ```
@@ -20,7 +20,7 @@
 備註說明：
 * 上方`clearRect()`的最後兩個參數為範圍，將`x`和`y`軸指定為和整個`canvas`畫布的寬高相等，等於清空畫布上的所有繪製。
 >>>
-4. 在`draw`中繪製一個矩形（四邊形）
+4. 繪製一個矩形（四邊形）
     ```javascript
     ctx.strokeRect(x,0,100,100)
     ```
@@ -58,7 +58,7 @@
 
 ### 衛星公轉
 ---
-1. 建立一個變數`t`
+1. 建立一個變數`t`，並指派為0
     ```javascript
     let t = 0
     ```
@@ -128,3 +128,75 @@
 程式碼：
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch04/ex02/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch04/ex02/index.js)
+
+### 反彈的球
+---
+1. 建立變數`x`和`y`並指派為0
+    ```javascript
+    let x = 0
+    let y = 0
+    ```
+2. 為`x`及`y`軸各別建立的移動量
+    ```javascript
+    let moveX = 3
+    let moveY = 2
+    ```
+3. 製作一個`function`，名字叫做`draw`
+    ```javascript
+    function draw(){
+
+    }
+    ```
+4. 在`draw`中先清空`canvas`上的所有繪製圖形
+    ```javascript
+    ctx.clearRect(0,0,canvas.width,canvas.height)
+    ```
+5. 繪製一個紅色的圓形
+    ```javascript
+    ctx.beginPath()
+    ctx.arc(x,y,50,0,Math.PI*2)
+    ctx.fillStyle = '#FF0000'
+    ctx.fill()
+    ```
+7. 繪製完後將移動量增加
+    ```javascript
+    x = x + moveX
+    y = y + moveY
+    ```
+8. 圓形的繪製座標`x`如果超過畫布的寬，得將移動量變成負的
+    ```javascript
+    if (x >= canvas.width)
+        x = x - 3
+    ```
+>>>
+備註說明：
+* 當圓形的`x`繪製座標大於畫布的寬時，圓形會超出右側螢幕，因此讓一直遞增的`x`座標在達到畫布的寬時改為遞減，使繪製的`x`座標減少，圓形也反方向繪製。
+>>>
+9. 當圓形的繪製座標`x`小於0時，得將移動量變成正的
+    ```javascript
+    else if(x <= 0)
+        x = x + 3
+    ```
+>>>
+備註說明：
+* 當圓形的`x`座標小於0時，圓形會超出在左側螢幕，因此讓遞減的`x`座標在達到0時改為遞增，使繪製的`x`座標增加，圓形也會往反方向繪製。
+>>>
+10. `y`軸的座標也要判斷高度決定移動量的正負
+    ```javascript
+    if (y <= canvas.height)
+        y = y - 2
+    else if
+        y = y + 3
+    ```
+11. 在`draw`外設置讓`draw`每10毫秒重新繪製一次
+    ```javascript
+    setInterval(draw,10)
+    ```
+經上方步驟，頁面上會不停繪製移動的圓形，並會在觸碰螢幕邊界時反彈，結果可由以下頁面查閱：
+
+[https://gqsm.gitlab.io/canvas/Ch04/ex03/index.html](https://gqsm.gitlab.io/canvas/Ch04/ex03/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch04/ex03/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch04/ex03/index.js)
+
