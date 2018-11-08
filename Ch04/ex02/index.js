@@ -18,7 +18,7 @@ function draw() {
     ctx.arc(0, 0, 250, 0, Math.PI * 2)
     ctx.stroke()
 
-    ctx.rotate(t / 360 * Math.PI * 2)
+    ctx.rotate(t * Math.PI / 180)
     ctx.beginPath()
     ctx.arc(250, 0, 50, 0, Math.PI * 2)
     ctx.stroke()

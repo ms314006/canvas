@@ -20,7 +20,7 @@
 備註說明：
 * 上方`clearRect()`的最後兩個參數為範圍，將`x`和`y`軸指定為和整個`canvas`畫布的寬高相等，等於清空畫布上的所有繪製。
 >>>
-4. 繪製一個矩形（四邊形）
+4. 在清空後繪製一個矩形（四邊形）
     ```javascript
     ctx.strokeRect(x,0,100,100)
     ```
@@ -92,11 +92,11 @@
     ```
 6. 將畫布旋轉`t`度
     ```javascript
-    ctx.rotate(t/360 * Math.PI*2)
+    ctx.rotate(t * Math.PI / 180)
     ```
 >>>
 備註說明：
-* 在`canvas`中角度必須以`Math.PI`表示。因此將目前角度`t`除上一圈360度，再乘上`Math.PI`的兩倍也就是360度，兩個360度抵銷後，就能得到`canvas`懂的`Math.PI`格式。
+* 在`canvas`中角度必須以`Math.PI`表示。因此用`Math.PI / 180`取得每度的數值後在乘上角度`t`。
 >>>
 7. 在距離圓心`x`軸250單位的地方繪製圓形
     ```javascript
@@ -151,7 +151,7 @@
     ```javascript
     ctx.clearRect(0,0,canvas.width,canvas.height)
     ```
-5. 繪製一個紅色的圓形
+5. 在清空後，繪製一個紅色的圓形
     ```javascript
     ctx.beginPath()
     ctx.arc(x,y,50,0,Math.PI*2)
@@ -166,7 +166,7 @@
 7. 圓形的繪製座標`x`如果超過畫布的寬，得將移動量變成負的
     ```javascript
     if (x >= canvas.width)
-        x = x - 3
+        moveX - 3
     ```
 >>>
 備註說明：
@@ -175,18 +175,19 @@
 8. 當圓形的繪製座標`x`小於0時，得將移動量變成正的
     ```javascript
     else if(x <= 0)
-        x = x + 3
+        moveX = 3
     ```
 >>>
 備註說明：
+* 
 * 當圓形的`x`座標小於0時，圓形會超出在左側螢幕，因此讓遞減的`x`座標在達到0時改為遞增，使繪製的`x`座標增加，圓形也會往反方向繪製。
 >>>
 9. `y`軸的繪製座標也要判斷畫布的高度決定移動量的正負
     ```javascript
     if (y <= canvas.height)
-        y = y - 2
+        moveY = -2
     else if
-        y = y + 3
+        moveY = 3
     ```
 10. 在`draw`外設置讓`draw`每10毫秒重新繪製一次
     ```javascript
