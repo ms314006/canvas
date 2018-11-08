@@ -28,6 +28,7 @@
 * [Ch04-基礎動畫](https://gitlab.com/GQSM/canvas/tree/master/Ch04#ch04-%E5%9F%BA%E7%A4%8E%E5%8B%95%E7%95%AB)
     * [移動的矩形（四邊形）](https://gitlab.com/GQSM/canvas/tree/master/Ch04#%E5%9F%BA%E7%A4%8E%E5%8B%95%E7%95%AB-%E7%A7%BB%E5%8B%95%E7%9A%84%E7%9F%A9%E5%BD%A2%E5%9B%9B%E9%82%8A%E5%BD%A2)
     * [衛星公轉](https://gitlab.com/GQSM/canvas/tree/master/Ch04#%E5%9F%BA%E7%A4%8E%E5%8B%95%E7%95%AB-%E8%A1%9B%E6%98%9F%E5%85%AC%E8%BD%89)
+    * [反彈的球](https://gitlab.com/GQSM/canvas/tree/master/Ch04#%E5%8F%8D%E5%BD%88%E7%9A%84%E7%90%83)    
 
 ### 參考文章
 此專案學習內容參考以下文件整理撰寫： 
