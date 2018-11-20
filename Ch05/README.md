@@ -2,7 +2,7 @@
 
 ### 移動的準心
 ---
-1. 建立一個變數`mouseX`和`mouseY`，並指派為0
+1. 建立變數`mouseX`和`mouseY`，並指派為0
     ```javascript
     let mouseX = 0
     let mouseY = 0
@@ -99,3 +99,76 @@
 程式碼：
 
 [https://gitlab.com/GQSM/canvas/blob/master/Ch05/ex01/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch05/ex01/index.js)
+
+### 小畫家
+---
+1. 建立變數`mouseX`和`mouseY`指派為0，再建立另一個紀錄滑鼠狀態，初始值為`false`
+    ```javascript
+    let mouseX = 0
+    let mouseY = 0
+    let mouseStatus = false
+    ```
+2. 在背景增加一個偵測器，當滑鼠游標改變位置時執行`updateMove`
+    ```javascript
+    document.addEventListener("mousemove", updateMove)
+    ```
+3. 製作一個`function`名字是`updateMove`，並在觸發時更新滑鼠座標
+    ```javascript
+    function updateMove(e){
+        mouseX = e.x
+        mouseY = e.y
+    }
+    ```
+4. 在背景另外增加偵測器，當滑鼠游標點下時變更`mouseStatus`的狀態，並執行`draw`
+    ```javascript
+    document.addEventListener("mousedown", function(){
+        mouseStatus = true
+        draw()
+    })
+    ```
+>>>
+備註說明：
+* `mousedown`也是偵聽器的一種類型，為滑鼠點下時觸發。
+>>>
+5. 製作一個`function`名字是`draw`。在`draw`內開啟繪畫路徑，並用`moveTo`指定目前滑鼠位置為初始繪圖的點。
+    ```javascript
+    function draw(){
+        ctx.beginPath()
+        ctx.moveTo(mouseX, mouseY)
+    }
+    ```
+>>>
+備註說明：
+* 在這裡不需要清空`canvas`畫布，因為要留下之前繪過的痕跡。
+>>>
+6. 在滑鼠移動時觸發的`updateMove`內，判斷目前`mouseStatus`的狀態為`true`時使用`lineTo`將線連在一起並繪製。
+	```javascript
+    function updateMove(e){
+        mouseX = e.x
+        mouseY = e.y
+        if (mouseStatus == true) {
+            ctx.lineTo(mouseX, mouseY)
+            ctx.stroke()
+        }
+    }
+    ```
+>>>
+備註說明：
+* 當滑鼠點下時會將`mouseStatus`變為`true`，因此在滑鼠還未放開時，持續繪畫。
+>>>
+7. 增加一個監聽器，在滑鼠放開時變更`mouseStatus`為`false`。
+    ```javascript
+    document.addEventListener("mouseup", function(){ mouseStatus = false })
+    ```
+>>>
+備註說明：
+* 當在這裡放開滑鼠時，`mouseStatus`會被設定為`false`，便不會再`updateMove`中持續繪製，一直到滑鼠再一次點下，觸發`mousedown`時才會再開始繪圖。
+>>>
+
+經上方步驟，頁面上會變成一個簡單的小畫家繪板，結果可由以下頁面查閱：
+
+[https://gqsm.gitlab.io/canvas/Ch05/ex03/index.html](https://gqsm.gitlab.io/canvas/Ch05/ex03/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch05/ex03/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch05/ex03/index.js)
