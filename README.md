@@ -31,6 +31,7 @@
     * [反彈的球](https://gitlab.com/GQSM/canvas/tree/master/Ch04#%E5%8F%8D%E5%BD%88%E7%9A%84%E7%90%83)    
 * [Ch05-互動動畫](https://gitlab.com/GQSM/canvas/tree/master/Ch05#ch05-%E4%BA%92%E5%8B%95%E5%8B%95%E7%95%AB)
     * [移動的準心](https://gitlab.com/GQSM/canvas/tree/master/Ch05#%E7%A7%BB%E5%8B%95%E7%9A%84%E6%BA%96%E5%BF%83)
+    * [天色變化](https://gitlab.com/GQSM/canvas/tree/master/Ch05#%E5%B0%8F%E7%95%AB%E5%AE%B6)
     * [小畫家](https://gitlab.com/GQSM/canvas/tree/master/Ch05#%E5%B0%8F%E7%95%AB%E5%AE%B6)
 
 

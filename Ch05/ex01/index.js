@@ -24,8 +24,8 @@ function draw() {
     ctx.strokeStyle = '#FF0000'
     ctx.stroke()
 
-    for(let i=0;i<360;i=i+90){
-        ctx.rotate(i * Math.PI / 180)
+    for(let i=0;i<4;i=i+1){
+        ctx.rotate(90 * Math.PI / 180)
         ctx.beginPath()
         ctx.moveTo(0,0)
         ctx.lineTo(20,0)
