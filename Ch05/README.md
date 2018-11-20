@@ -125,13 +125,21 @@
     ```javascript
     document.addEventListener("mousemove", updateMove)
     ```
-3. 製作一個 `function` 名字是 `updateMove` ，用來記錄滑鼠位置，並依滑鼠的 `Y` 軸位置依比例改變 `blue` 和 `green` 的值
+3. 製作一個 `function` 名字是 `updateMove` ，用來記錄滑鼠位置，並依滑鼠的 `Y` 軸位置依比例改變 `blue` 和 `green` 的值。
     ```javascript
     function updateMove(e){
         mouseX = e.x
         mouseY = e.y
+
+        blue = 180 - (mouseY/canvas.height) * 180
+        green = 255 - (mouseY/canvas.height) * 255 * 0.5
     }
     ```
+>>>
+備註說明：
+* `blue` 用目前滑鼠的高度除上畫布高度乘上 180 取得滑鼠變化的比例，再用初始值扣掉該比例。
+* `green` 用同樣方法得出比例後，透過乘上 0.5 來調整更細微的比例，再用初始值扣掉該比例。
+>>>
 4. 製作一個 `function` 名字是 `draw` ，並用 `reat()` 繪製填滿整個螢幕。
     ```javascript
     function draw(){
@@ -173,6 +181,13 @@
     ```javascript
     setInterval(draw, 10)
     ```
+經上方步驟，頁面上會隨著鼠標移動擁有天色變化的效果，結果可由以下頁面查閱：
+
+[https://gqsm.gitlab.io/canvas/Ch05/ex02/index.html](https://gqsm.gitlab.io/canvas/Ch05/ex02/index.html)
+
+程式碼：
+
+[https://gitlab.com/GQSM/canvas/blob/master/Ch05/ex02/index.js](https://gitlab.com/GQSM/canvas/blob/master/Ch05/ex02/index.js)
 
 ### 小畫家
 ---
@@ -230,7 +245,7 @@
 備註說明：
 * 當滑鼠點下時會將 `mouseStatus` 變為 `true` ，因此在滑鼠還未放開時，持續繪畫。
 >>>
-7. 增加一個監聽器，在滑鼠放開時變更`mouseStatus`為`false`。
+7. 增加一個監聽器，在滑鼠放開時變更 `mouseStatus` 為 `false` 。
     ```javascript
     document.addEventListener("mouseup", function(){ mouseStatus = false })
     ```
